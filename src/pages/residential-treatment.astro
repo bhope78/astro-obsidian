@@ -1,0 +1,176 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Residential Treatment - Ossified Orbit">
+	<main>
+		<h1>Residential Treatment</h1>
+		<div class="hero-section">
+			<p>Comprehensive residential treatment services providing 24/7 support in a safe, therapeutic environment for individuals seeking recovery and healing.</p>
+		</div>
+		
+		<div class="content-sections">
+			<section class="service-section">
+				<h2>Our Approach</h2>
+				<p>Our residential treatment program offers a structured, supportive environment where individuals can focus entirely on their recovery. We provide comprehensive care that addresses physical, emotional, and psychological needs through evidence-based treatment modalities.</p>
+			</section>
+			
+			<section class="service-section">
+				<h2>Services Included</h2>
+				<div class="services-grid">
+					<div class="service-card">
+						<h3>Individual Therapy</h3>
+						<p>One-on-one counseling sessions with licensed therapists tailored to each resident's specific needs and goals.</p>
+					</div>
+					<div class="service-card">
+						<h3>Group Therapy</h3>
+						<p>Peer support groups that foster connection, shared experiences, and mutual healing in a safe environment.</p>
+					</div>
+					<div class="service-card">
+						<h3>Medical Care</h3>
+						<p>24/7 medical supervision and care provided by qualified healthcare professionals and nursing staff.</p>
+					</div>
+					<div class="service-card">
+						<h3>Life Skills Training</h3>
+						<p>Practical skills development to support successful reintegration into community living and independence.</p>
+					</div>
+				</div>
+			</section>
+			
+			<section class="service-section">
+				<h2>Who We Serve</h2>
+				<p>Our residential treatment program is designed for individuals who require intensive, round-the-clock support as they work toward recovery and stability. We serve adults facing various challenges including mental health conditions, substance use disorders, and dual diagnosis situations.</p>
+			</section>
+			
+			<section class="service-section cta">
+				<h2>Ready to Begin Your Journey?</h2>
+				<p>Take the first step toward recovery in our supportive residential environment. Contact us today to learn more about our admission process and how we can help you or your loved one.</p>
+				<a href="/contact" class="cta-button">Contact Us Today</a>
+			</section>
+		</div>
+	</main>
+</Layout>
+
+<style>
+	main {
+		margin: auto;
+		padding: 1rem;
+		width: 1000px;
+		max-width: calc(100% - 2rem);
+		color: white;
+		font-size: 20px;
+		line-height: 1.6;
+	}
+	
+	h1 {
+		font-size: 4rem;
+		font-weight: 700;
+		line-height: 1;
+		text-align: center;
+		margin-bottom: 2rem;
+	}
+	
+	.hero-section {
+		text-align: center;
+		margin-bottom: 3rem;
+		padding: 2rem;
+		background: rgba(255, 255, 255, 0.1);
+		border-radius: 12px;
+		border: 1px solid rgba(255, 255, 255, 0.2);
+	}
+	
+	.hero-section p {
+		font-size: 1.3rem;
+		margin: 0;
+		color: #f39c12;
+	}
+	
+	.content-sections {
+		display: flex;
+		flex-direction: column;
+		gap: 3rem;
+	}
+	
+	.service-section h2 {
+		color: #f39c12;
+		margin-bottom: 1.5rem;
+		font-size: 2rem;
+	}
+	
+	.service-section p {
+		font-size: 1.1rem;
+		margin-bottom: 1.5rem;
+	}
+	
+	.services-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		gap: 2rem;
+		margin-top: 2rem;
+	}
+	
+	.service-card {
+		background: rgba(255, 255, 255, 0.1);
+		padding: 2rem;
+		border-radius: 8px;
+		border: 1px solid rgba(255, 255, 255, 0.2);
+		transition: transform 0.3s, box-shadow 0.3s;
+	}
+	
+	.service-card:hover {
+		transform: translateY(-5px);
+		box-shadow: 0 10px 30px rgba(243, 156, 18, 0.2);
+	}
+	
+	.service-card h3 {
+		color: #e67e22;
+		margin-bottom: 1rem;
+		font-size: 1.3rem;
+	}
+	
+	.service-card p {
+		font-size: 1rem;
+		line-height: 1.5;
+		margin: 0;
+	}
+	
+	.cta {
+		text-align: center;
+		background: rgba(243, 156, 18, 0.1);
+		padding: 3rem;
+		border-radius: 12px;
+		border: 1px solid rgba(243, 156, 18, 0.3);
+	}
+	
+	.cta-button {
+		display: inline-block;
+		background: #f39c12;
+		color: white;
+		padding: 1rem 2rem;
+		border-radius: 6px;
+		text-decoration: none;
+		font-weight: bold;
+		font-size: 1.1rem;
+		margin-top: 1rem;
+		transition: background 0.3s, transform 0.3s;
+	}
+	
+	.cta-button:hover {
+		background: #e67e22;
+		transform: translateY(-2px);
+	}
+	
+	@media (max-width: 768px) {
+		h1 {
+			font-size: 3rem;
+		}
+		
+		.hero-section p {
+			font-size: 1.1rem;
+		}
+		
+		.services-grid {
+			grid-template-columns: 1fr;
+		}
+	}
+</style>

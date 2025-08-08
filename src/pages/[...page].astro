@@ -1,0 +1,96 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../layouts/Layout.astro';
+
+export async function getStaticPaths() {
+  const pages = await getCollection('pages');
+  return pages.map(page => ({
+    params: { page: page.slug },
+    props: { page },
+  }));
+}
+
+const { page } = Astro.props;
+const { Content } = await page.render();
+const { hero } = page.data;
+---
+
+<Layout title={page.data.title}>
+  <div class="bg-white">
+    {hero && (
+      <!-- Hero Section -->
+      <div class="relative bg-gray-50 py-16 sm:py-24">
+        <div class="mx-auto max-w-7xl px-6 lg:px-8">
+          <div class="mx-auto max-w-2xl text-center">
+            {hero.badge && (
+              <div class="mb-8">
+                <span class="rounded-full bg-blue-600/10 px-3 py-1 text-sm font-semibold leading-6 text-blue-600 ring-1 ring-inset ring-blue-600/10">
+                  {hero.badge}
+                </span>
+              </div>
+            )}
+            <h1 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
+              {hero.title}
+            </h1>
+            <p class="mt-6 text-lg leading-8 text-gray-600">
+              {hero.subtitle}
+            </p>
+          </div>
+        </div>
+      </div>
+    )}
+
+    <!-- Content Section -->
+    <div class="mx-auto max-w-7xl px-6 py-16 sm:py-24 lg:px-8">
+      <div class="mx-auto max-w-3xl">
+        <div class="prose prose-lg prose-blue max-w-none">
+          <Content />
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>
+
+<style>
+  /* Custom prose styles for better typography */
+  .prose {
+    @apply text-gray-900;
+  }
+  
+  .prose h1 {
+    @apply text-3xl font-bold text-gray-900 mt-8 mb-6;
+  }
+  
+  .prose h2 {
+    @apply text-2xl font-bold text-gray-900 mt-8 mb-4;
+  }
+  
+  .prose h3 {
+    @apply text-xl font-semibold text-gray-900 mt-6 mb-3;
+  }
+  
+  .prose h4 {
+    @apply text-lg font-semibold text-gray-900 mt-4 mb-2;
+  }
+  
+  .prose ul {
+    @apply space-y-2;
+  }
+  
+  .prose li {
+    @apply text-gray-800;
+  }
+  
+  .prose strong {
+    @apply text-gray-900 font-semibold;
+  }
+  
+  .prose p {
+    @apply text-gray-800 leading-7;
+  }
+  
+  /* Ensure all content is visible */
+  .prose * {
+    color: inherit;
+  }
+</style>

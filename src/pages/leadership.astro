@@ -1,0 +1,157 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Leadership - Ossified Orbit">
+	<main>
+		<h1>Our Leadership</h1>
+		<div class="leadership-intro">
+			<p>Meet the experienced leaders who drive our company's vision and success.</p>
+		</div>
+		
+		<div class="leadership-grid">
+			<div class="leader-card">
+				<div class="leader-image">
+					<div class="placeholder-image">JD</div>
+				</div>
+				<div class="leader-info">
+					<h2>Jane Doe</h2>
+					<h3>Chief Executive Officer</h3>
+					<p>Jane brings over 15 years of experience in technology leadership and strategic business development. She founded Ossified Orbit with a vision to create innovative solutions that make a real impact.</p>
+				</div>
+			</div>
+			
+			<div class="leader-card">
+				<div class="leader-image">
+					<div class="placeholder-image">JS</div>
+				</div>
+				<div class="leader-info">
+					<h2>John Smith</h2>
+					<h3>Chief Technology Officer</h3>
+					<p>John is a seasoned technologist with expertise in software architecture and emerging technologies. He leads our technical team and ensures we stay at the forefront of innovation.</p>
+				</div>
+			</div>
+			
+			<div class="leader-card">
+				<div class="leader-image">
+					<div class="placeholder-image">MJ</div>
+				</div>
+				<div class="leader-info">
+					<h2>Maria Johnson</h2>
+					<h3>Chief Operating Officer</h3>
+					<p>Maria oversees our day-to-day operations and ensures seamless project delivery. Her background in operations management helps us maintain our high standards of quality and efficiency.</p>
+				</div>
+			</div>
+			
+			<div class="leader-card">
+				<div class="leader-image">
+					<div class="placeholder-image">DL</div>
+				</div>
+				<div class="leader-info">
+					<h2>David Lee</h2>
+					<h3>Chief Financial Officer</h3>
+					<p>David manages our financial strategy and growth initiatives. His experience in corporate finance and strategic planning helps guide our company's sustainable growth.</p>
+				</div>
+			</div>
+		</div>
+	</main>
+</Layout>
+
+<style>
+	main {
+		margin: auto;
+		padding: 1rem;
+		width: 1000px;
+		max-width: calc(100% - 2rem);
+		color: white;
+		font-size: 20px;
+		line-height: 1.6;
+	}
+	
+	h1 {
+		font-size: 4rem;
+		font-weight: 700;
+		line-height: 1;
+		text-align: center;
+		margin-bottom: 1rem;
+	}
+	
+	.leadership-intro {
+		text-align: center;
+		margin-bottom: 3rem;
+		font-size: 1.2rem;
+	}
+	
+	.leadership-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+		gap: 2rem;
+		margin-top: 2rem;
+	}
+	
+	.leader-card {
+		background: rgba(255, 255, 255, 0.1);
+		padding: 2rem;
+		border-radius: 12px;
+		border: 1px solid rgba(255, 255, 255, 0.2);
+		display: flex;
+		gap: 1.5rem;
+		transition: transform 0.3s, box-shadow 0.3s;
+	}
+	
+	.leader-card:hover {
+		transform: translateY(-5px);
+		box-shadow: 0 10px 30px rgba(243, 156, 18, 0.2);
+	}
+	
+	.leader-image {
+		flex-shrink: 0;
+	}
+	
+	.placeholder-image {
+		width: 100px;
+		height: 100px;
+		background: linear-gradient(135deg, #f39c12, #e67e22);
+		border-radius: 50%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-size: 2rem;
+		font-weight: bold;
+		color: white;
+	}
+	
+	.leader-info h2 {
+		color: #f39c12;
+		margin: 0 0 0.5rem 0;
+		font-size: 1.5rem;
+	}
+	
+	.leader-info h3 {
+		color: #e67e22;
+		margin: 0 0 1rem 0;
+		font-size: 1.1rem;
+		font-weight: normal;
+	}
+	
+	.leader-info p {
+		font-size: 0.9rem;
+		line-height: 1.5;
+		margin: 0;
+	}
+	
+	@media (max-width: 768px) {
+		.leadership-grid {
+			grid-template-columns: 1fr;
+		}
+		
+		.leader-card {
+			flex-direction: column;
+			text-align: center;
+		}
+		
+		.placeholder-image {
+			margin: 0 auto;
+		}
+	}
+</style>

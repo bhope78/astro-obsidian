@@ -1,0 +1,650 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Donate - Ossified Orbit">
+	<main>
+		<h1>Support Our Mission</h1>
+		<div class="hero-section">
+			<p>Your generous donation helps us provide critical services to individuals and families in need, supporting recovery, housing, and hope in our community.</p>
+		</div>
+		
+		<div class="content-sections">
+			<section class="donation-section">
+				<h2>Why Your Support Matters</h2>
+				<p>Every donation, regardless of size, makes a direct impact on the lives of the people we serve. Your support helps us bridge gaps in services, provide emergency assistance, and expand our programs to reach more individuals and families in crisis.</p>
+				
+				<div class="impact-stats">
+					<div class="stat-card">
+						<div class="stat-number">$25</div>
+						<div class="stat-description">Provides a week of bus passes for someone seeking employment</div>
+					</div>
+					<div class="stat-card">
+						<div class="stat-number">$50</div>
+						<div class="stat-description">Funds a crisis intervention session for someone in immediate need</div>
+					</div>
+					<div class="stat-card">
+						<div class="stat-number">$100</div>
+						<div class="stat-description">Covers emergency housing assistance for a family for one night</div>
+					</div>
+					<div class="stat-card">
+						<div class="stat-number">$250</div>
+						<div class="stat-description">Supports a month of counseling services for an individual in recovery</div>
+					</div>
+				</div>
+			</section>
+			
+			<section class="donation-section">
+				<h2>Ways to Give</h2>
+				<div class="giving-options">
+					<div class="giving-card">
+						<div class="giving-icon">💳</div>
+						<h3>One-Time Donation</h3>
+						<p>Make a single donation online using your credit card, debit card, or PayPal account.</p>
+						<a href="#donate-form" class="donate-button primary">Donate Now</a>
+					</div>
+					
+					<div class="giving-card">
+						<div class="giving-icon">📅</div>
+						<h3>Monthly Giving</h3>
+						<p>Join our monthly giving program to provide steady, reliable support for our ongoing programs.</p>
+						<a href="#donate-form" class="donate-button primary">Give Monthly</a>
+					</div>
+					
+					<div class="giving-card">
+						<div class="giving-icon">🏢</div>
+						<h3>Corporate Sponsorship</h3>
+						<p>Partner with us through corporate giving, employee matching programs, or workplace giving campaigns.</p>
+						<a href="/contact" class="donate-button secondary">Learn More</a>
+					</div>
+					
+					<div class="giving-card">
+						<div class="giving-icon">🎁</div>
+						<h3>Legacy Giving</h3>
+						<p>Include Ossified Orbit in your will, trust, or estate planning to leave a lasting impact.</p>
+						<a href="/contact" class="donate-button secondary">Get Information</a>
+					</div>
+					
+					<div class="giving-card">
+						<div class="giving-icon">📦</div>
+						<h3>In-Kind Donations</h3>
+						<p>Donate goods, services, or volunteer time to directly support our programs and participants.</p>
+						<a href="/contact" class="donate-button secondary">View Wish List</a>
+					</div>
+					
+					<div class="giving-card">
+						<div class="giving-icon">🏃‍♀️</div>
+						<h3>Fundraising Events</h3>
+						<p>Participate in or organize fundraising events to support our mission and raise awareness.</p>
+						<a href="/contact" class="donate-button secondary">Get Involved</a>
+					</div>
+				</div>
+			</section>
+			
+			<section class="donation-section" id="donate-form">
+				<h2>Make a Donation</h2>
+				<div class="donation-form-container">
+					<div class="donation-amounts">
+						<h3>Select an Amount</h3>
+						<div class="amount-buttons">
+							<button class="amount-btn" data-amount="25">$25</button>
+							<button class="amount-btn" data-amount="50">$50</button>
+							<button class="amount-btn" data-amount="100">$100</button>
+							<button class="amount-btn" data-amount="250">$250</button>
+							<button class="amount-btn" data-amount="500">$500</button>
+							<button class="amount-btn custom">Other</button>
+						</div>
+						<div class="custom-amount" style="display: none;">
+							<label for="custom-amount-input">Custom Amount ($)</label>
+							<input type="number" id="custom-amount-input" min="1" placeholder="Enter amount">
+						</div>
+					</div>
+					
+					<div class="donation-frequency">
+						<h3>Donation Frequency</h3>
+						<div class="frequency-options">
+							<label class="frequency-option">
+								<input type="radio" name="frequency" value="one-time" checked>
+								<span>One-time</span>
+							</label>
+							<label class="frequency-option">
+								<input type="radio" name="frequency" value="monthly">
+								<span>Monthly</span>
+							</label>
+							<label class="frequency-option">
+								<input type="radio" name="frequency" value="quarterly">
+								<span>Quarterly</span>
+							</label>
+							<label class="frequency-option">
+								<input type="radio" name="frequency" value="annually">
+								<span>Annually</span>
+							</label>
+						</div>
+					</div>
+					
+					<div class="donation-form">
+						<h3>Donor Information</h3>
+						<form class="donor-form">
+							<div class="form-row">
+								<div class="form-group">
+									<label for="first-name">First Name *</label>
+									<input type="text" id="first-name" name="first-name" required>
+								</div>
+								<div class="form-group">
+									<label for="last-name">Last Name *</label>
+									<input type="text" id="last-name" name="last-name" required>
+								</div>
+							</div>
+							
+							<div class="form-group">
+								<label for="email">Email Address *</label>
+								<input type="email" id="email" name="email" required>
+							</div>
+							
+							<div class="form-group">
+								<label for="phone">Phone Number</label>
+								<input type="tel" id="phone" name="phone">
+							</div>
+							
+							<div class="form-group">
+								<label for="address">Address</label>
+								<input type="text" id="address" name="address">
+							</div>
+							
+							<div class="form-row">
+								<div class="form-group">
+									<label for="city">City</label>
+									<input type="text" id="city" name="city">
+								</div>
+								<div class="form-group">
+									<label for="state">State</label>
+									<input type="text" id="state" name="state">
+								</div>
+								<div class="form-group">
+									<label for="zip">ZIP Code</label>
+									<input type="text" id="zip" name="zip">
+								</div>
+							</div>
+							
+							<div class="form-options">
+								<label class="checkbox-option">
+									<input type="checkbox" name="anonymous">
+									<span>Make this donation anonymous</span>
+								</label>
+								<label class="checkbox-option">
+									<input type="checkbox" name="newsletter" checked>
+									<span>Subscribe to our newsletter for updates</span>
+								</label>
+								<label class="checkbox-option">
+									<input type="checkbox" name="employer-match">
+									<span>My employer has a matching gift program</span>
+								</label>
+							</div>
+							
+							<button type="submit" class="submit-donation">Complete Donation</button>
+						</form>
+					</div>
+				</div>
+				
+				<div class="security-info">
+					<p><strong>Secure Donation:</strong> All donations are processed through encrypted, secure channels. We never store your payment information on our servers.</p>
+					<p><strong>Tax Deductible:</strong> Ossified Orbit is a 501(c)(3) nonprofit organization. Your donation is tax-deductible to the fullest extent allowed by law. Tax ID: 00-0000000</p>
+				</div>
+			</section>
+			
+			<section class="donation-section">
+				<h2>Other Ways to Support</h2>
+				<div class="support-options">
+					<div class="support-item">
+						<h3>🤝 Volunteer Your Time</h3>
+						<p>Join our team of dedicated volunteers and directly contribute your skills and time to support our programs.</p>
+						<a href="/contact" class="support-link">Learn About Volunteering</a>
+					</div>
+					<div class="support-item">
+						<h3>📢 Spread the Word</h3>
+						<p>Follow us on social media, share our posts, and help raise awareness about our mission in the community.</p>
+						<a href="/contact" class="support-link">Follow Us</a>
+					</div>
+					<div class="support-item">
+						<h3>🏪 Shop to Support</h3>
+						<p>Purchase items from our online store or participate in community fundraising events.</p>
+						<a href="/contact" class="support-link">View Store</a>
+					</div>
+					<div class="support-item">
+						<h3>🎯 Advocate for Change</h3>
+						<p>Join our advocacy efforts to influence policy and create systemic change for the communities we serve.</p>
+						<a href="/contact" class="support-link">Get Involved</a>
+					</div>
+				</div>
+			</section>
+		</div>
+	</main>
+</Layout>
+
+<style>
+	main {
+		margin: auto;
+		padding: 1rem;
+		width: 1200px;
+		max-width: calc(100% - 2rem);
+		color: white;
+		font-size: 20px;
+		line-height: 1.6;
+	}
+	
+	h1 {
+		font-size: 4rem;
+		font-weight: 700;
+		line-height: 1;
+		text-align: center;
+		margin-bottom: 2rem;
+	}
+	
+	.hero-section {
+		text-align: center;
+		margin-bottom: 3rem;
+		padding: 2rem;
+		background: rgba(255, 255, 255, 0.1);
+		border-radius: 12px;
+		border: 1px solid rgba(255, 255, 255, 0.2);
+	}
+	
+	.hero-section p {
+		font-size: 1.3rem;
+		margin: 0;
+		color: #f39c12;
+	}
+	
+	.content-sections {
+		display: flex;
+		flex-direction: column;
+		gap: 3rem;
+	}
+	
+	.donation-section h2 {
+		color: #f39c12;
+		margin-bottom: 1.5rem;
+		font-size: 2rem;
+	}
+	
+	.donation-section p {
+		font-size: 1.1rem;
+		margin-bottom: 1.5rem;
+	}
+	
+	.impact-stats {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+		gap: 2rem;
+		margin-top: 2rem;
+	}
+	
+	.stat-card {
+		background: rgba(243, 156, 18, 0.1);
+		padding: 2rem;
+		border-radius: 12px;
+		text-align: center;
+		border: 1px solid rgba(243, 156, 18, 0.3);
+		transition: transform 0.3s, box-shadow 0.3s;
+	}
+	
+	.stat-card:hover {
+		transform: translateY(-5px);
+		box-shadow: 0 10px 30px rgba(243, 156, 18, 0.2);
+	}
+	
+	.stat-number {
+		font-size: 2.5rem;
+		font-weight: bold;
+		color: #f39c12;
+		margin-bottom: 1rem;
+	}
+	
+	.stat-description {
+		font-size: 1rem;
+		color: #e67e22;
+	}
+	
+	.giving-options {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		gap: 2rem;
+		margin-top: 2rem;
+	}
+	
+	.giving-card {
+		background: rgba(255, 255, 255, 0.1);
+		padding: 2rem;
+		border-radius: 12px;
+		border: 1px solid rgba(255, 255, 255, 0.2);
+		text-align: center;
+		transition: transform 0.3s, box-shadow 0.3s;
+	}
+	
+	.giving-card:hover {
+		transform: translateY(-5px);
+		box-shadow: 0 10px 30px rgba(243, 156, 18, 0.2);
+	}
+	
+	.giving-icon {
+		font-size: 3rem;
+		margin-bottom: 1rem;
+	}
+	
+	.giving-card h3 {
+		color: #f39c12;
+		margin-bottom: 1rem;
+		font-size: 1.3rem;
+	}
+	
+	.giving-card p {
+		font-size: 1rem;
+		margin-bottom: 1.5rem;
+	}
+	
+	.donate-button {
+		display: inline-block;
+		padding: 0.75rem 1.5rem;
+		border-radius: 6px;
+		text-decoration: none;
+		font-weight: bold;
+		transition: all 0.3s;
+		font-size: 1rem;
+	}
+	
+	.donate-button.primary {
+		background: #f39c12;
+		color: white;
+	}
+	
+	.donate-button.primary:hover {
+		background: #e67e22;
+		transform: translateY(-2px);
+	}
+	
+	.donate-button.secondary {
+		background: transparent;
+		color: #f39c12;
+		border: 2px solid #f39c12;
+	}
+	
+	.donate-button.secondary:hover {
+		background: #f39c12;
+		color: white;
+		transform: translateY(-2px);
+	}
+	
+	.donation-form-container {
+		background: rgba(255, 255, 255, 0.05);
+		padding: 3rem;
+		border-radius: 12px;
+		border: 1px solid rgba(255, 255, 255, 0.1);
+		margin-top: 2rem;
+	}
+	
+	.donation-amounts h3, .donation-frequency h3, .donation-form h3 {
+		color: #f39c12;
+		margin-bottom: 1rem;
+		font-size: 1.3rem;
+	}
+	
+	.amount-buttons {
+		display: flex;
+		gap: 1rem;
+		margin-bottom: 2rem;
+		flex-wrap: wrap;
+	}
+	
+	.amount-btn {
+		background: rgba(255, 255, 255, 0.1);
+		border: 2px solid rgba(255, 255, 255, 0.3);
+		color: white;
+		padding: 0.75rem 1.5rem;
+		border-radius: 6px;
+		cursor: pointer;
+		transition: all 0.3s;
+		font-weight: bold;
+	}
+	
+	.amount-btn:hover, .amount-btn.selected {
+		background: #f39c12;
+		border-color: #f39c12;
+		transform: translateY(-2px);
+	}
+	
+	.custom-amount {
+		margin-bottom: 2rem;
+	}
+	
+	.custom-amount label {
+		display: block;
+		color: #f39c12;
+		margin-bottom: 0.5rem;
+		font-weight: bold;
+	}
+	
+	.custom-amount input {
+		width: 200px;
+		padding: 0.75rem;
+		border: 2px solid rgba(255, 255, 255, 0.3);
+		border-radius: 6px;
+		background: rgba(255, 255, 255, 0.1);
+		color: white;
+		font-size: 1rem;
+	}
+	
+	.custom-amount input:focus {
+		outline: none;
+		border-color: #f39c12;
+	}
+	
+	.frequency-options {
+		display: flex;
+		gap: 2rem;
+		margin-bottom: 2rem;
+		flex-wrap: wrap;
+	}
+	
+	.frequency-option {
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
+		cursor: pointer;
+		color: white;
+		font-weight: bold;
+	}
+	
+	.frequency-option input[type="radio"] {
+		accent-color: #f39c12;
+	}
+	
+	.donor-form {
+		margin-top: 1rem;
+	}
+	
+	.form-row {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+		gap: 1rem;
+		margin-bottom: 1rem;
+	}
+	
+	.form-group {
+		margin-bottom: 1rem;
+	}
+	
+	.form-group label {
+		display: block;
+		color: #f39c12;
+		margin-bottom: 0.5rem;
+		font-weight: bold;
+	}
+	
+	.form-group input {
+		width: 100%;
+		padding: 0.75rem;
+		border: 2px solid rgba(255, 255, 255, 0.3);
+		border-radius: 6px;
+		background: rgba(255, 255, 255, 0.1);
+		color: white;
+		font-size: 1rem;
+		box-sizing: border-box;
+	}
+	
+	.form-group input:focus {
+		outline: none;
+		border-color: #f39c12;
+	}
+	
+	.form-options {
+		margin: 2rem 0;
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+	}
+	
+	.checkbox-option {
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
+		cursor: pointer;
+		color: white;
+	}
+	
+	.checkbox-option input[type="checkbox"] {
+		accent-color: #f39c12;
+	}
+	
+	.submit-donation {
+		background: #f39c12;
+		color: white;
+		padding: 1rem 2rem;
+		border: none;
+		border-radius: 6px;
+		font-size: 1.1rem;
+		font-weight: bold;
+		cursor: pointer;
+		transition: all 0.3s;
+		width: 100%;
+	}
+	
+	.submit-donation:hover {
+		background: #e67e22;
+		transform: translateY(-2px);
+	}
+	
+	.security-info {
+		background: rgba(243, 156, 18, 0.1);
+		padding: 2rem;
+		border-radius: 8px;
+		border: 1px solid rgba(243, 156, 18, 0.3);
+		margin-top: 2rem;
+	}
+	
+	.security-info p {
+		font-size: 0.95rem;
+		margin: 0.5rem 0;
+		color: #e67e22;
+	}
+	
+	.support-options {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		gap: 2rem;
+		margin-top: 2rem;
+	}
+	
+	.support-item {
+		background: rgba(255, 255, 255, 0.05);
+		padding: 2rem;
+		border-radius: 12px;
+		border-left: 4px solid #f39c12;
+	}
+	
+	.support-item h3 {
+		color: #f39c12;
+		margin-bottom: 1rem;
+		font-size: 1.2rem;
+	}
+	
+	.support-item p {
+		font-size: 1rem;
+		margin-bottom: 1rem;
+	}
+	
+	.support-link {
+		color: #f39c12;
+		text-decoration: none;
+		font-weight: bold;
+		transition: color 0.3s;
+	}
+	
+	.support-link:hover {
+		color: #e67e22;
+	}
+	
+	@media (max-width: 768px) {
+		main {
+			width: 100%;
+		}
+		
+		h1 {
+			font-size: 3rem;
+		}
+		
+		.hero-section p {
+			font-size: 1.1rem;
+		}
+		
+		.impact-stats {
+			grid-template-columns: repeat(2, 1fr);
+		}
+		
+		.giving-options {
+			grid-template-columns: 1fr;
+		}
+		
+		.amount-buttons {
+			justify-content: center;
+		}
+		
+		.frequency-options {
+			justify-content: center;
+		}
+		
+		.form-row {
+			grid-template-columns: 1fr;
+		}
+	}
+</style>
+
+<script>
+	// Amount button selection
+	const amountButtons = document.querySelectorAll('.amount-btn');
+	const customAmountDiv = document.querySelector('.custom-amount');
+	const customAmountInput = document.getElementById('custom-amount-input');
+	
+	amountButtons.forEach(button => {
+		button.addEventListener('click', () => {
+			// Remove selected class from all buttons
+			amountButtons.forEach(btn => btn.classList.remove('selected'));
+			
+			// Add selected class to clicked button
+			button.classList.add('selected');
+			
+			// Show/hide custom amount input
+			if (button.classList.contains('custom')) {
+				customAmountDiv.style.display = 'block';
+				customAmountInput.focus();
+			} else {
+				customAmountDiv.style.display = 'none';
+			}
+		});
+	});
+	
+	// Form submission
+	document.querySelector('.donor-form').addEventListener('submit', (e) => {
+		e.preventDefault();
+		alert('Thank you for your donation! In a real implementation, this would process your payment securely.');
+	});
+</script>

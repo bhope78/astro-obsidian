@@ -1,0 +1,148 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+
+export async function getStaticPaths() {
+  const services = await getCollection('services');
+  return services.map(service => ({
+    params: { service: service.slug },
+    props: { service },
+  }));
+}
+
+const { service } = Astro.props;
+const { Content } = await service.render();
+const { title, description, shortDescription, features, stats } = service.data;
+---
+
+<Layout title={title}>
+  <div class="bg-white">
+    <!-- Hero Section -->
+    <div class="relative bg-gray-50 py-16 sm:py-24">
+      <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <div class="mx-auto max-w-2xl text-center">
+          <h1 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
+            {title}
+          </h1>
+          <p class="mt-6 text-lg leading-8 text-gray-600">
+            {description}
+          </p>
+        </div>
+      </div>
+    </div>
+
+    {stats && stats.length > 0 && (
+      <!-- Stats Section -->
+      <div class="bg-white py-16 sm:py-24">
+        <div class="mx-auto max-w-7xl px-6 lg:px-8">
+          <dl class="grid grid-cols-1 gap-x-8 gap-y-16 text-center lg:grid-cols-3">
+            {stats.map((stat) => (
+              <div class="mx-auto flex max-w-xs flex-col gap-y-4">
+                <dt class="text-base leading-7 text-gray-600">{stat.label}</dt>
+                <dd class="order-first text-3xl font-semibold tracking-tight text-gray-900 sm:text-5xl">
+                  {stat.value}
+                </dd>
+              </div>
+            ))}
+          </dl>
+        </div>
+      </div>
+    )}
+
+    {features && features.length > 0 && (
+      <!-- Features Section -->
+      <div class="bg-gray-50 py-16 sm:py-24">
+        <div class="mx-auto max-w-7xl px-6 lg:px-8">
+          <div class="mx-auto max-w-2xl text-center">
+            <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Key Features</h2>
+          </div>
+          <div class="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
+            <dl class="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-2">
+              {features.map((feature, index) => (
+                <div class="flex flex-col">
+                  <dt class="text-base font-semibold leading-7 text-gray-900">
+                    <div class="mb-6 flex h-10 w-10 items-center justify-center rounded-lg bg-blue-600">
+                      <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                      </svg>
+                    </div>
+                    {feature}
+                  </dt>
+                </div>
+              ))}
+            </dl>
+          </div>
+        </div>
+      </div>
+    )}
+
+    <!-- Content Section -->
+    <div class="mx-auto max-w-7xl px-6 py-16 sm:py-24 lg:px-8">
+      <div class="mx-auto max-w-3xl">
+        <div class="prose prose-lg prose-blue max-w-none">
+          <Content />
+        </div>
+      </div>
+    </div>
+
+    <!-- CTA Section -->
+    <div class="bg-blue-600">
+      <div class="px-6 py-16 sm:px-6 sm:py-24 lg:px-8">
+        <div class="mx-auto max-w-2xl text-center">
+          <h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl">Ready to get started?</h2>
+          <p class="mx-auto mt-6 max-w-xl text-lg leading-8 text-blue-200">
+            Contact us today to learn more about our {title.toLowerCase()} services and how we can help you.
+          </p>
+          <div class="mt-10 flex items-center justify-center gap-x-6">
+            <a href="/contact" class="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-blue-600 shadow-sm hover:bg-blue-50">Contact Us</a>
+            <a href="/crisis-services" class="text-sm font-semibold leading-6 text-white">Need immediate help? <span aria-hidden="true">→</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>
+
+<style>
+  /* Custom prose styles for better typography */
+  .prose {
+    @apply text-gray-900;
+  }
+  
+  .prose h1 {
+    @apply text-3xl font-bold text-gray-900 mt-8 mb-6;
+  }
+  
+  .prose h2 {
+    @apply text-2xl font-bold text-gray-900 mt-8 mb-4;
+  }
+  
+  .prose h3 {
+    @apply text-xl font-semibold text-gray-900 mt-6 mb-3;
+  }
+  
+  .prose h4 {
+    @apply text-lg font-semibold text-gray-900 mt-4 mb-2;
+  }
+  
+  .prose ul {
+    @apply space-y-2;
+  }
+  
+  .prose li {
+    @apply text-gray-800;
+  }
+  
+  .prose strong {
+    @apply text-gray-900 font-semibold;
+  }
+  
+  .prose p {
+    @apply text-gray-800 leading-7;
+  }
+  
+  /* Ensure all content is visible */
+  .prose * {
+    color: inherit;
+  }
+</style>
