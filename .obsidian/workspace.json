@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "src/content/pages/about.md",
+                "file": "src/content/pages/contact.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "about"
+              "title": "contact"
             }
           }
         ]
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "src/content/pages/about.md",
+                "file": "src/content/pages/contact.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for about"
+              "title": "Backlinks for contact"
             }
           },
           {
@@ -113,12 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "src/content/pages/about.md",
+                "file": "src/content/pages/contact.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from about"
+              "title": "Outgoing links from contact"
             }
           },
           {
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "src/content/pages/about.md",
+                "file": "src/content/pages/contact.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of about"
+              "title": "Outline of contact"
             }
           }
         ]
@@ -169,5 +169,24 @@
     }
   },
   "active": "b3ce5dff99b78f66",
-  "lastOpenFiles": []
+  "lastOpenFiles": [
+    "src/content/pages/careers.md.tmp.88139.1754686548349",
+    "src/pages/[...page].astro.tmp.88139.1754686489303",
+    "src/pages/[...page].astro.tmp.88139.1754686237234",
+    "src/pages/[...page].astro.tmp.88139.1754686233233",
+    "src/pages/index.astro.tmp.88139.1754686177999",
+    "src/pages/[...page].astro.tmp.88139.1754686174324",
+    "src/pages/index.astro.tmp.88139.1754686124592",
+    "src/pages/index.astro.tmp.88139.1754686058023",
+    "src/pages/index.astro.tmp.88139.1754686006732",
+    "src/pages/[...page].astro.tmp.88139.1754685999266",
+    "src/pages/[...page].astro.tmp.88139.1754685906030",
+    "too_much_white_space.jpg",
+    "public/bonita_house_logo.jpeg",
+    "bonita_house_logo.jpeg",
+    "src/content/pages/careers.md",
+    "src/content/pages/contact.md",
+    "src/content/pages/about.md",
+    "Pasted image 20250808130701.png"
+  ]
 }
