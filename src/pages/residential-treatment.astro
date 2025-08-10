@@ -2,175 +2,112 @@
 import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout title="Residential Treatment - Ossified Orbit">
-	<div class="page-container">
-		<h1>Residential Treatment</h1>
-		<div class="hero-section">
-			<p>Comprehensive residential treatment services providing 24/7 support in a safe, therapeutic environment for individuals seeking recovery and healing.</p>
-		</div>
-		
-		<div class="content-sections">
-			<section class="service-section">
-				<h2>Our Approach</h2>
-				<p>Our residential treatment program offers a structured, supportive environment where individuals can focus entirely on their recovery. We provide comprehensive care that addresses physical, emotional, and psychological needs through evidence-based treatment modalities.</p>
-			</section>
-			
-			<section class="service-section">
-				<h2>Services Included</h2>
-				<div class="services-grid">
-					<div class="service-card">
-						<h3>Individual Therapy</h3>
-						<p>One-on-one counseling sessions with licensed therapists tailored to each resident's specific needs and goals.</p>
-					</div>
-					<div class="service-card">
-						<h3>Group Therapy</h3>
-						<p>Peer support groups that foster connection, shared experiences, and mutual healing in a safe environment.</p>
-					</div>
-					<div class="service-card">
-						<h3>Medical Care</h3>
-						<p>24/7 medical supervision and care provided by qualified healthcare professionals and nursing staff.</p>
-					</div>
-					<div class="service-card">
-						<h3>Life Skills Training</h3>
-						<p>Practical skills development to support successful reintegration into community living and independence.</p>
-					</div>
-				</div>
-			</section>
-			
-			<section class="service-section">
-				<h2>Who We Serve</h2>
-				<p>Our residential treatment program is designed for individuals who require intensive, round-the-clock support as they work toward recovery and stability. We serve adults facing various challenges including mental health conditions, substance use disorders, and dual diagnosis situations.</p>
-			</section>
-			
-			<section class="service-section cta">
-				<h2>Ready to Begin Your Journey?</h2>
-				<p>Take the first step toward recovery in our supportive residential environment. Contact us today to learn more about our admission process and how we can help you or your loved one.</p>
-				<a href="/contact" class="cta-button">Contact Us Today</a>
-			</section>
+<Layout title="Residential Treatment - Bonita House">
+	<!-- Hero Section -->
+	<div class="bg-gradient-to-r from-bonita-50 to-bonita-emerald-50 py-16 sm:py-24">
+		<div class="mx-auto max-w-4xl px-6 lg:px-8 text-center">
+			<h1 class="text-4xl font-bold tracking-tight text-bonita-slate-900 sm:text-6xl lg:text-7xl">
+				Residential Treatment
+			</h1>
+			<p class="mt-8 text-xl leading-relaxed text-bonita-slate-700 max-w-2xl mx-auto">
+				Comprehensive residential treatment services providing 24/7 support in a safe, therapeutic environment for individuals seeking recovery and healing.
+			</p>
 		</div>
 	</div>
-</Layout>
 
-<style>
-	.page-container {
-		margin: auto;
-		padding: 1rem;
-		width: 1000px;
-		max-width: calc(100% - 2rem);
-		color: #000000;
-		font-size: 20px;
-		line-height: 1.6;
-	}
-	
-	h1 {
-		font-size: 4rem;
-		font-weight: 700;
-		line-height: 1;
-		text-align: center;
-		margin-bottom: 2rem;
-	}
-	
-	.hero-section {
-		text-align: center;
-		margin-bottom: 3rem;
-		padding: 2rem;
-		background: rgba(255, 255, 255, 0.1);
-		border-radius: 12px;
-		border: 1px solid rgba(255, 255, 255, 0.2);
-	}
-	
-	.hero-section p {
-		font-size: 1.3rem;
-		margin: 0;
-		color: #f39c12;
-	}
-	
-	.content-sections {
-		display: flex;
-		flex-direction: column;
-		gap: 3rem;
-	}
-	
-	.service-section h2 {
-		color: #f39c12;
-		margin-bottom: 1.5rem;
-		font-size: 2rem;
-	}
-	
-	.service-section p {
-		font-size: 1.1rem;
-		margin-bottom: 1.5rem;
-	}
-	
-	.services-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-		gap: 2rem;
-		margin-top: 2rem;
-	}
-	
-	.service-card {
-		background: rgba(255, 255, 255, 0.1);
-		padding: 2rem;
-		border-radius: 8px;
-		border: 1px solid rgba(255, 255, 255, 0.2);
-		transition: transform 0.3s, box-shadow 0.3s;
-	}
-	
-	.service-card:hover {
-		transform: translateY(-5px);
-		box-shadow: 0 10px 30px rgba(243, 156, 18, 0.2);
-	}
-	
-	.service-card h3 {
-		color: #e67e22;
-		margin-bottom: 1rem;
-		font-size: 1.3rem;
-	}
-	
-	.service-card p {
-		font-size: 1rem;
-		line-height: 1.5;
-		margin: 0;
-	}
-	
-	.cta {
-		text-align: center;
-		background: rgba(243, 156, 18, 0.1);
-		padding: 3rem;
-		border-radius: 12px;
-		border: 1px solid rgba(243, 156, 18, 0.3);
-	}
-	
-	.cta-button {
-		display: inline-block;
-		background: #f39c12;
-		color: #000000;
-		padding: 1rem 2rem;
-		border-radius: 6px;
-		text-decoration: none;
-		font-weight: bold;
-		font-size: 1.1rem;
-		margin-top: 1rem;
-		transition: background 0.3s, transform 0.3s;
-	}
-	
-	.cta-button:hover {
-		background: #e67e22;
-		transform: translateY(-2px);
-	}
-	
-	@media (max-width: 768px) {
-		h1 {
-			font-size: 3rem;
-		}
-		
-		.hero-section p {
-			font-size: 1.1rem;
-		}
-		
-		.services-grid {
-			grid-template-columns: 1fr;
-		}
-	}
-</style>
+	<!-- Our Approach Section -->
+	<section class="bg-white py-16 sm:py-24">
+		<div class="mx-auto max-w-4xl px-6 lg:px-8">
+			<div class="mx-auto max-w-2xl text-center">
+				<h2 class="text-3xl font-bold tracking-tight text-bonita-600 sm:text-4xl mb-8">
+					Our Approach
+				</h2>
+			</div>
+			<div class="bg-bonita-50 rounded-xl p-8 lg:p-12 border border-bonita-100 shadow-lg">
+				<p class="text-lg leading-relaxed text-bonita-slate-700 text-center">
+					Our residential treatment program offers a structured, supportive environment where individuals can focus entirely on their recovery. We provide comprehensive care that addresses physical, emotional, and psychological needs through evidence-based treatment modalities.
+				</p>
+			</div>
+		</div>
+	</section>
+
+	<!-- Services Section -->
+	<section class="bg-bonita-slate-50 py-16 sm:py-24">
+		<div class="mx-auto max-w-6xl px-6 lg:px-8">
+			<div class="mx-auto max-w-2xl text-center mb-16">
+				<h2 class="text-3xl font-bold tracking-tight text-bonita-emerald-600 sm:text-4xl mb-8">
+					Services Included
+				</h2>
+			</div>
+			
+			<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+				<div class="bg-white rounded-xl p-8 shadow-lg border border-bonita-slate-200 hover:shadow-xl transition-shadow duration-300">
+					<div class="flex items-center mb-4">
+						<div class="w-3 h-3 bg-bonita-600 rounded-full mr-4"></div>
+						<h3 class="text-xl font-semibold text-bonita-slate-800">Individual Therapy</h3>
+					</div>
+					<p class="text-bonita-slate-600 leading-relaxed">One-on-one counseling sessions with licensed therapists tailored to each resident's specific needs and goals.</p>
+				</div>
+				
+				<div class="bg-white rounded-xl p-8 shadow-lg border border-bonita-slate-200 hover:shadow-xl transition-shadow duration-300">
+					<div class="flex items-center mb-4">
+						<div class="w-3 h-3 bg-bonita-emerald-600 rounded-full mr-4"></div>
+						<h3 class="text-xl font-semibold text-bonita-slate-800">Group Therapy</h3>
+					</div>
+					<p class="text-bonita-slate-600 leading-relaxed">Peer support groups that foster connection, shared experiences, and mutual healing in a safe environment.</p>
+				</div>
+				
+				<div class="bg-white rounded-xl p-8 shadow-lg border border-bonita-slate-200 hover:shadow-xl transition-shadow duration-300">
+					<div class="flex items-center mb-4">
+						<div class="w-3 h-3 bg-bonita-600 rounded-full mr-4"></div>
+						<h3 class="text-xl font-semibold text-bonita-slate-800">Medical Care</h3>
+					</div>
+					<p class="text-bonita-slate-600 leading-relaxed">24/7 medical supervision and care provided by qualified healthcare professionals and nursing staff.</p>
+				</div>
+				
+				<div class="bg-white rounded-xl p-8 shadow-lg border border-bonita-slate-200 hover:shadow-xl transition-shadow duration-300">
+					<div class="flex items-center mb-4">
+						<div class="w-3 h-3 bg-bonita-emerald-600 rounded-full mr-4"></div>
+						<h3 class="text-xl font-semibold text-bonita-slate-800">Life Skills Training</h3>
+					</div>
+					<p class="text-bonita-slate-600 leading-relaxed">Practical skills development to support successful reintegration into community living and independence.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Who We Serve Section -->
+	<section class="bg-white py-16 sm:py-24">
+		<div class="mx-auto max-w-4xl px-6 lg:px-8">
+			<div class="mx-auto max-w-2xl text-center">
+				<h2 class="text-3xl font-bold tracking-tight text-bonita-600 sm:text-4xl mb-8">
+					Who We Serve
+				</h2>
+			</div>
+			<div class="bg-bonita-50 rounded-xl p-8 lg:p-12 border border-bonita-100 shadow-lg">
+				<p class="text-lg leading-relaxed text-bonita-slate-700 text-center">
+					Our residential treatment program is designed for individuals who require intensive, round-the-clock support as they work toward recovery and stability. We serve adults facing various challenges including mental health conditions, substance use disorders, and dual diagnosis situations.
+				</p>
+			</div>
+		</div>
+	</section>
+
+	<!-- Call to Action Section -->
+	<section class="bg-bonita-gradient py-16 sm:py-24">
+		<div class="mx-auto max-w-4xl px-6 lg:px-8 text-center">
+			<h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl mb-8">
+				Ready to Begin Your Journey?
+			</h2>
+			<p class="text-xl leading-relaxed text-bonita-100 mb-12 max-w-2xl mx-auto">
+				Take the first step toward recovery in our supportive residential environment. Contact us today to learn more about our admission process and how we can help you or your loved one.
+			</p>
+			<a href="/contact" 
+			   class="inline-flex items-center rounded-full bg-white px-8 py-4 text-lg font-semibold text-bonita-600 shadow-lg hover:bg-bonita-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+				Contact Us Today
+				<svg class="ml-2 -mr-1 w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+					<path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+				</svg>
+			</a>
+		</div>
+	</section>
+</Layout>
