@@ -3,7 +3,7 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title="Wellness Centers - Ossified Orbit">
-	<main>
+	<div class="page-container">
 		<h1>Wellness Centers</h1>
 		<div class="hero-section">
 			<p>Comprehensive wellness hubs offering integrated mental health, physical wellness, and community support services in accessible neighborhood locations.</p>
@@ -119,16 +119,16 @@ import Layout from '../layouts/Layout.astro';
 				<a href="/contact" class="cta-button">Find Your Center</a>
 			</section>
 		</div>
-	</main>
+	</div>
 </Layout>
 
 <style>
-	main {
+	.page-container {
 		margin: auto;
 		padding: 1rem;
 		width: 1200px;
 		max-width: calc(100% - 2rem);
-		color: white;
+		color: #000000;
 		font-size: 20px;
 		line-height: 1.6;
 	}
@@ -308,7 +308,7 @@ import Layout from '../layouts/Layout.astro';
 	.cta-button {
 		display: inline-block;
 		background: #f39c12;
-		color: white;
+		color: #000000;
 		padding: 1rem 2rem;
 		border-radius: 6px;
 		text-decoration: none;
@@ -324,7 +324,7 @@ import Layout from '../layouts/Layout.astro';
 	}
 	
 	@media (max-width: 768px) {
-		main {
+		.page-container {
 			width: 100%;
 		}
 		

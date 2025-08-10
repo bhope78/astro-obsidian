@@ -19,118 +19,67 @@ const { title = 'Ossified Orbit' } = Astro.props;
 	</head>
 	<body>
 		<Navigation />
-		<slot />
+		<main class="main-content">
+			<slot />
+		</main>
 	</body>
 </html>
 
 <style is:global>
-	html,
-	body {
-		margin: 0 !important;
-		padding: 0 !important;
-		width: 100% !important;
-		height: 100% !important;
-		background-color: #ffffff !important;
-		min-height: 100vh !important;
-		color: #000000 !important;
+	/* Clean, minimal global styles that work WITH Tailwind, not against it */
+	html {
 		font-feature-settings: 'rlig' 1, 'calt' 1;
 	}
 	
-	/* NUCLEAR OPTION: Force ALL text to be BLACK with maximum specificity */
-	html *, html *::before, html *::after,
-	body *, body *::before, body *::after,
-	div, div *, span, span *, p, p *, h1, h1 *, h2, h2 *, h3, h3 *, h4, h4 *, h5, h5 *, h6, h6 *,
-	a, a *, li, li *, ul, ul *, ol, ol *, strong, strong *, em, em *, 
-	section, section *, article, article *, main, main *, aside, aside *,
-	blockquote, blockquote *, pre, pre *, code, code *,
-	table, table *, thead, thead *, tbody, tbody *, tr, tr *, td, td *, th, th * {
-		color: #000000 !important;
+	body {
+		margin: 0;
+		padding: 0;
+		background-color: #ffffff;
+		min-height: 100vh;
 	}
 	
-	/* Target ALL possible text containers */
-	.prose, .prose *,
-	.prose p, .prose h1, .prose h2, .prose h3, .prose h4, .prose h5, .prose h6,
-	.prose li, .prose span, .prose strong, .prose em, .prose a,
-	.prose div, .prose section, .prose article, .prose blockquote,
-	.prose ul, .prose ol, .prose dl, .prose dt, .prose dd {
-		color: #000000 !important;
+	/* Modern mobile-first responsive layout - Works with Tailwind utilities */
+	.main-content {
+		/* Mobile: Account for sticky nav height (h-16 = 64px) */
+		padding-top: 4rem;
+		min-height: calc(100vh - 4rem);
+		padding-left: 1rem;
+		padding-right: 1rem;
+		position: relative;
+		z-index: 1;
 	}
 	
-	/* Kill ALL color classes and inline styles */
-	*[style*="color"],
-	.text-white, .text-gray-50, .text-gray-100, .text-gray-200, .text-gray-300,
-	.text-gray-400, .text-gray-500, .text-gray-600, .text-gray-700, .text-gray-800,
-	.text-gray-900, .text-black,
-	.text-red-500, .text-red-600, .text-red-700, .text-red-800, .text-red-900,
-	.text-blue-500, .text-blue-600, .text-blue-700, .text-blue-800, .text-blue-900,
-	.text-green-500, .text-green-600, .text-green-700, .text-green-800, .text-green-900,
-	.text-yellow-500, .text-yellow-600, .text-yellow-700, .text-yellow-800, .text-yellow-900,
-	.text-orange-500, .text-orange-600, .text-orange-700, .text-orange-800, .text-orange-900,
-	.text-purple-500, .text-purple-600, .text-purple-700, .text-purple-800, .text-purple-900,
-	.bonita-orange, .text-bonita-orange {
-		color: #000000 !important;
+	/* Desktop: Adjust for larger navigation (lg:h-24 = 96px) */
+	@media (min-width: 1024px) {
+		.main-content {
+			padding-top: 6rem;
+			min-height: calc(100vh - 6rem);
+			padding-left: 2rem;
+			padding-right: 2rem;
+		}
 	}
 	
-	/* Navigation specific overrides */
-	nav, nav *, 
-	.navigation, .navigation *,
-	.nav, .nav *,
-	header, header *,
-	.header, .header * {
-		color: #000000 !important;
+	/* Fix for home page to prevent double spacing */
+	.main-content > .relative.isolate.overflow-hidden {
+		margin-top: -4rem;
+		margin-left: -1rem;
+		margin-right: -1rem;
 	}
 	
-	/* Override any Tailwind or framework defaults */
-	[class*="text-"], [class*="prose"] {
-		color: #000000 !important;
+	@media (min-width: 1024px) {
+		.main-content > .relative.isolate.overflow-hidden {
+			margin-top: -6rem;
+			margin-left: -2rem;
+			margin-right: -2rem;
+		}
 	}
 	
-	/* Only exception: White text on blue/dark backgrounds for readability */
-	.bg-blue-600, .bg-blue-600 *,
-	.bg-blue-700, .bg-blue-700 *,
-	.bg-blue-800, .bg-blue-800 *,
-	.bg-gray-800, .bg-gray-800 *,
-	.bg-gray-900, .bg-gray-900 *,
-	.bg-black, .bg-black * {
-		color: #ffffff !important;
-	}
-	
-	/* Force white backgrounds to stay white */
-	.bg-white, .bg-gray-50 {
-		background-color: #ffffff !important;
-	}
-	
-	/* SPECIFIC OVERRIDE FOR P TAGS - FORCE BLACK TEXT */
-	p, 
-	p *,
-	html p,
-	html p *,
-	body p,
-	body p *,
-	div p,
-	div p *,
-	section p,
-	section p *,
-	article p,
-	article p *,
-	main p,
-	main p *,
-	.prose p,
-	.prose p *,
-	[class] p,
-	[class] p * {
-		color: #000000 !important;
-	}
-	
-	/* Even more specific P tag overrides */
-	p[class],
-	p[class] *,
-	p.text-white,
-	p.text-gray-600,
-	p.text-gray-500,
-	p.text-gray-400,
-	p[style],
-	p[style] * {
-		color: #000000 !important;
+	/* Mobile menu positioning */
+	#mobile-menu {
+		position: absolute;
+		top: 100%;
+		left: 0;
+		right: 0;
+		z-index: 50;
 	}
 </style>

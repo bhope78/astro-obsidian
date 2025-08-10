@@ -3,7 +3,7 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title="Crisis Services - Ossified Orbit">
-	<main>
+	<div class="page-container">
 		<h1>Crisis Services</h1>
 		<div class="hero-section">
 			<p>Immediate, compassionate support and intervention services available 24/7 for individuals and families facing mental health, substance use, or behavioral health crises.</p>
@@ -166,16 +166,16 @@ import Layout from '../layouts/Layout.astro';
 				</div>
 			</section>
 		</div>
-	</main>
+	</div>
 </Layout>
 
 <style>
-	main {
+	.page-container {
 		margin: auto;
 		padding: 1rem;
 		width: 1200px;
 		max-width: calc(100% - 2rem);
-		color: white;
+		color: #000000;
 		font-size: 20px;
 		line-height: 1.6;
 	}
@@ -213,7 +213,7 @@ import Layout from '../layouts/Layout.astro';
 	}
 	
 	.emergency-content h2 {
-		color: white;
+		color: #000000;
 		margin-bottom: 1rem;
 		font-size: 1.8rem;
 	}
@@ -374,7 +374,7 @@ import Layout from '../layouts/Layout.astro';
 	
 	.step-number {
 		background: #f39c12;
-		color: white;
+		color: #000000;
 		width: 40px;
 		height: 40px;
 		border-radius: 50%;
@@ -425,7 +425,7 @@ import Layout from '../layouts/Layout.astro';
 	
 	.cta-button.emergency {
 		background: #e74c3c;
-		color: white;
+		color: #000000;
 	}
 	
 	.cta-button.emergency:hover {
@@ -435,7 +435,7 @@ import Layout from '../layouts/Layout.astro';
 	
 	.cta-button.secondary {
 		background: #f39c12;
-		color: white;
+		color: #000000;
 	}
 	
 	.cta-button.secondary:hover {
@@ -444,7 +444,7 @@ import Layout from '../layouts/Layout.astro';
 	}
 	
 	@media (max-width: 768px) {
-		main {
+		.page-container {
 			width: 100%;
 		}
 		

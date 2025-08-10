@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "src/content/pages/contact.md",
+                "file": "src/content/services/supported-independent-living.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "contact"
+              "title": "supported-independent-living"
             }
           }
         ]
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "src/content/pages/contact.md",
+                "file": "src/content/services/supported-independent-living.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for contact"
+              "title": "Backlinks for supported-independent-living"
             }
           },
           {
@@ -113,12 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "src/content/pages/contact.md",
+                "file": "src/content/services/supported-independent-living.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from contact"
+              "title": "Outgoing links from supported-independent-living"
             }
           },
           {
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "src/content/pages/contact.md",
+                "file": "src/content/services/supported-independent-living.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of contact"
+              "title": "Outline of supported-independent-living"
             }
           }
         ]
@@ -170,6 +170,10 @@
   },
   "active": "b3ce5dff99b78f66",
   "lastOpenFiles": [
+    "src/pages/housing.astro.tmp.71754.1754865016706",
+    "src/pages/donate.astro.tmp.71754.1754864954234",
+    "picture.png",
+    "src/content/pages/contact.md",
     "src/content/pages/careers.md.tmp.88139.1754686548349",
     "src/pages/[...page].astro.tmp.88139.1754686489303",
     "src/pages/[...page].astro.tmp.88139.1754686237234",
@@ -179,13 +183,10 @@
     "src/pages/index.astro.tmp.88139.1754686124592",
     "src/pages/index.astro.tmp.88139.1754686058023",
     "src/pages/index.astro.tmp.88139.1754686006732",
-    "src/pages/[...page].astro.tmp.88139.1754685999266",
-    "src/pages/[...page].astro.tmp.88139.1754685906030",
     "too_much_white_space.jpg",
     "public/bonita_house_logo.jpeg",
     "bonita_house_logo.jpeg",
     "src/content/pages/careers.md",
-    "src/content/pages/contact.md",
     "src/content/pages/about.md",
     "Pasted image 20250808130701.png"
   ]
