@@ -24,7 +24,7 @@ const { hero } = page.data;
           <div class="mx-auto max-w-2xl text-center">
             {hero.badge && (
               <div class="mb-0 lg:mb-8">
-                <span class="rounded-full bg-blue-600/10 px-3 py-1 text-sm font-semibold leading-6 text-blue-600 ring-1 ring-inset ring-blue-600/10">
+                <span class="rounded-full bg-bonita-600/10 px-3 py-1 text-sm font-semibold leading-6 text-bonita-600 ring-1 ring-inset ring-bonita-600/10">
                   {hero.badge}
                 </span>
               </div>
@@ -43,7 +43,7 @@ const { hero } = page.data;
     <!-- Content Section -->
     <div class="mx-auto max-w-7xl px-6 py-0 lg:py-4 xl:py-8 lg:px-8">
       <div class="mx-auto max-w-3xl">
-        <div class="prose prose-lg prose-blue max-w-none">
+        <div class="prose prose-lg prose-bonita max-w-none">
           <Content />
         </div>
       </div>
@@ -93,4 +93,146 @@ const { hero } = page.data;
   .prose * {
     color: inherit;
   }
+
+  /* Override BambooHR and any external content colors to use bonita teal */
+  #BambooHR,
+  #BambooHR *,
+  .BambooHR-AtsJobBoard,
+  .BambooHR-AtsJobBoard *,
+  div[data-domain*="bamboohr"] *,
+  [class*="bamboo"] *,
+  [id*="bamboo"] * {
+    color: #0d9488 !important; /* bonita-600 teal */
+  }
+
+  /* Force all text elements to be teal */
+  #BambooHR span,
+  #BambooHR div,
+  #BambooHR p,
+  #BambooHR h1,
+  #BambooHR h2,
+  #BambooHR h3,
+  #BambooHR h4,
+  #BambooHR h5,
+  #BambooHR h6,
+  #BambooHR td,
+  #BambooHR th,
+  #BambooHR li,
+  #BambooHR strong,
+  #BambooHR b,
+  #BambooHR em,
+  #BambooHR i {
+    color: #0d9488 !important; /* bonita-600 teal */
+  }
+
+  /* Specifically target links and buttons in external content */
+  #BambooHR a,
+  .BambooHR-AtsJobBoard a,
+  #BambooHR button,
+  .BambooHR-AtsJobBoard button,
+  #BambooHR .button,
+  .BambooHR-AtsJobBoard .button,
+  div[data-domain*="bamboohr"] a,
+  div[data-domain*="bamboohr"] button {
+    color: #0d9488 !important; /* bonita-600 teal */
+    border-color: #0d9488 !important;
+  }
+
+  /* Override any inline styles or external styles */
+  #BambooHR [style],
+  .BambooHR-AtsJobBoard [style],
+  div[data-domain*="bamboohr"] [style] {
+    color: #0d9488 !important; /* bonita-600 teal */
+  }
+
+  /* Target common class names that might contain other colors */
+  .text-blue,
+  .text-blue-600,
+  .text-blue-500,
+  .text-black,
+  .text-gray-900,
+  .text-gray-800,
+  .bg-blue,
+  .bg-blue-600,
+  .bg-blue-500,
+  .border-blue,
+  .border-blue-600,
+  .border-blue-500 {
+    color: #0d9488 !important;
+    background-color: transparent !important;
+    border-color: #0d9488 !important;
+  }
+
+  /* Additional fallback for dynamically loaded content */
+  body #BambooHR * {
+    color: #0d9488 !important;
+  }
 </style>
+
+<script>
+// Function to apply teal color to all BambooHR content
+function applyTealToBambooHR() {
+  const tealColor = '#0d9488'; // bonita-600 teal color
+  
+  // Get all elements within BambooHR container
+  const bambooContainer = document.getElementById('BambooHR');
+  if (bambooContainer) {
+    // Apply teal to all elements
+    const allElements = bambooContainer.querySelectorAll('*');
+    allElements.forEach(element => {
+      element.style.setProperty('color', tealColor, 'important');
+    });
+    
+    // Also apply to the container itself
+    bambooContainer.style.setProperty('color', tealColor, 'important');
+  }
+  
+  // Also target any elements that might be created with BambooHR classes
+  const bambooElements = document.querySelectorAll('[class*="bamboo"], [id*="bamboo"], [class*="BambooHR"], [id*="BambooHR"]');
+  bambooElements.forEach(element => {
+    element.style.setProperty('color', tealColor, 'important');
+    const children = element.querySelectorAll('*');
+    children.forEach(child => {
+      child.style.setProperty('color', tealColor, 'important');
+    });
+  });
+}
+
+// Run the function when DOM is loaded
+document.addEventListener('DOMContentLoaded', applyTealToBambooHR);
+
+// Also run after a short delay to catch dynamically loaded content
+setTimeout(applyTealToBambooHR, 1000);
+setTimeout(applyTealToBambooHR, 3000);
+setTimeout(applyTealToBambooHR, 5000);
+
+// Use MutationObserver to watch for dynamically added content
+const observer = new MutationObserver(function(mutations) {
+  mutations.forEach(function(mutation) {
+    if (mutation.type === 'childList' && mutation.addedNodes.length > 0) {
+      // Check if any of the added nodes are related to BambooHR
+      mutation.addedNodes.forEach(function(node) {
+        if (node.nodeType === 1) { // Element node
+          if (node.id === 'BambooHR' || 
+              node.className.includes('bamboo') || 
+              node.className.includes('BambooHR') ||
+              node.querySelector && (node.querySelector('#BambooHR') || node.querySelector('[class*="bamboo"]'))) {
+            setTimeout(applyTealToBambooHR, 100);
+          }
+        }
+      });
+    }
+  });
+});
+
+// Start observing
+observer.observe(document.body, {
+  childList: true,
+  subtree: true
+});
+
+// Clean up observer when page unloads
+window.addEventListener('beforeunload', function() {
+  observer.disconnect();
+});
+</script>

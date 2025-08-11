@@ -2,263 +2,189 @@
 import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout title="Supported Independent Living - Ossified Orbit">
-	<div class="page-container">
-		<h1>Supported Independent Living</h1>
-		<div class="hero-section">
-			<p>Empowering individuals to live independently while providing the support and resources needed to thrive in their own homes and communities.</p>
-		</div>
-		
-		<div class="content-sections">
-			<section class="service-section">
-				<h2>Independence with Support</h2>
-				<p>Our Supported Independent Living program bridges the gap between residential care and complete independence. We provide flexible, individualized support that allows people to live in their own homes while accessing the services they need to maintain stability and achieve their personal goals.</p>
-			</section>
-			
-			<section class="service-section">
-				<h2>Core Services</h2>
-				<div class="services-grid">
-					<div class="service-card">
-						<h3>Daily Living Skills</h3>
-						<p>Training and support in essential life skills including cooking, cleaning, budgeting, and personal care management.</p>
-					</div>
-					<div class="service-card">
-						<h3>Community Integration</h3>
-						<p>Assistance connecting with community resources, social activities, and building meaningful relationships.</p>
-					</div>
-					<div class="service-card">
-						<h3>Employment Support</h3>
-						<p>Job search assistance, interview preparation, workplace skills training, and ongoing employment support.</p>
-					</div>
-					<div class="service-card">
-						<h3>Healthcare Coordination</h3>
-						<p>Help navigating healthcare systems, managing appointments, and ensuring continuity of medical and mental health care.</p>
-					</div>
-					<div class="service-card">
-						<h3>Crisis Planning</h3>
-						<p>Development of personalized crisis intervention plans and 24/7 access to emergency support when needed.</p>
-					</div>
-					<div class="service-card">
-						<h3>Life Coaching</h3>
-						<p>Goal setting, motivation, and ongoing coaching to help individuals achieve their personal and professional aspirations.</p>
-					</div>
-				</div>
-			</section>
-			
-			<section class="service-section">
-				<h2>Program Features</h2>
-				<div class="features-container">
-					<div class="feature-column">
-						<h3>Flexible Support Levels</h3>
-						<ul>
-							<li>Daily check-ins and visits</li>
-							<li>Weekly support meetings</li>
-							<li>Monthly progress reviews</li>
-							<li>As-needed crisis support</li>
-						</ul>
-					</div>
-					<div class="feature-column">
-						<h3>Individualized Plans</h3>
-						<ul>
-							<li>Personal goal development</li>
-							<li>Customized service delivery</li>
-							<li>Progress tracking and adjustments</li>
-							<li>Regular plan reviews</li>
-						</ul>
-					</div>
-					<div class="feature-column">
-						<h3>Community Focus</h3>
-						<ul>
-							<li>Local resource connections</li>
-							<li>Social skill development</li>
-							<li>Volunteer opportunities</li>
-							<li>Peer support networks</li>
-						</ul>
-					</div>
-				</div>
-			</section>
-			
-			<section class="service-section">
-				<h2>Who Benefits</h2>
-				<p>Our Supported Independent Living program serves adults who have the desire and potential to live independently but need ongoing support to maintain housing, employment, and community connections. This includes individuals transitioning from residential care, those with mental health conditions, developmental disabilities, or anyone seeking to build greater independence while maintaining necessary supports.</p>
-			</section>
-			
-			<section class="service-section cta">
-				<h2>Take the Next Step</h2>
-				<p>Ready to explore greater independence with the right support? Learn more about our Supported Independent Living program and how we can help you achieve your goals.</p>
-				<a href="/contact" class="cta-button">Learn More</a>
-			</section>
+<Layout title="Supported Independent Living - Bonita House">
+	<!-- Hero Section -->
+	<div class="bg-gradient-to-r from-bonita-50 to-bonita-emerald-50 py-16 sm:py-24">
+		<div class="mx-auto max-w-4xl px-6 lg:px-8 text-center">
+			<h1 class="text-4xl font-bold tracking-tight text-bonita-slate-900 sm:text-6xl lg:text-7xl">
+				Supported Independent Living
+			</h1>
+			<p class="mt-8 text-xl leading-relaxed text-bonita-slate-700 max-w-2xl mx-auto">
+				Empowering individuals to live independently while providing the support and resources needed to thrive in their own homes and communities.
+			</p>
 		</div>
 	</div>
-</Layout>
 
-<style>
-	.page-container {
-		margin: auto;
-		padding: 1rem;
-		width: 1000px;
-		max-width: calc(100% - 2rem);
-		color: #000000;
-		font-size: 20px;
-		line-height: 1.6;
-	}
-	
-	h1 {
-		font-size: 4rem;
-		font-weight: 700;
-		line-height: 1;
-		text-align: center;
-		margin-bottom: 2rem;
-	}
-	
-	.hero-section {
-		text-align: center;
-		margin-bottom: 3rem;
-		padding: 2rem;
-		background: rgba(255, 255, 255, 0.1);
-		border-radius: 12px;
-		border: 1px solid rgba(255, 255, 255, 0.2);
-	}
-	
-	.hero-section p {
-		font-size: 1.3rem;
-		margin: 0;
-		color: #f39c12;
-	}
-	
-	.content-sections {
-		display: flex;
-		flex-direction: column;
-		gap: 3rem;
-	}
-	
-	.service-section h2 {
-		color: #f39c12;
-		margin-bottom: 1.5rem;
-		font-size: 2rem;
-	}
-	
-	.service-section p {
-		font-size: 1.1rem;
-		margin-bottom: 1.5rem;
-	}
-	
-	.services-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-		gap: 2rem;
-		margin-top: 2rem;
-	}
-	
-	.service-card {
-		background: rgba(255, 255, 255, 0.1);
-		padding: 2rem;
-		border-radius: 8px;
-		border: 1px solid rgba(255, 255, 255, 0.2);
-		transition: transform 0.3s, box-shadow 0.3s;
-	}
-	
-	.service-card:hover {
-		transform: translateY(-5px);
-		box-shadow: 0 10px 30px rgba(243, 156, 18, 0.2);
-	}
-	
-	.service-card h3 {
-		color: #e67e22;
-		margin-bottom: 1rem;
-		font-size: 1.3rem;
-	}
-	
-	.service-card p {
-		font-size: 1rem;
-		line-height: 1.5;
-		margin: 0;
-	}
-	
-	.features-container {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-		gap: 2rem;
-		margin-top: 2rem;
-	}
-	
-	.feature-column {
-		background: rgba(243, 156, 18, 0.05);
-		padding: 2rem;
-		border-radius: 8px;
-		border: 1px solid rgba(243, 156, 18, 0.2);
-	}
-	
-	.feature-column h3 {
-		color: #f39c12;
-		margin-bottom: 1rem;
-		font-size: 1.3rem;
-	}
-	
-	.feature-column ul {
-		list-style: none;
-		padding: 0;
-		margin: 0;
-	}
-	
-	.feature-column li {
-		padding: 0.5rem 0;
-		border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-		font-size: 1rem;
-	}
-	
-	.feature-column li:last-child {
-		border-bottom: none;
-	}
-	
-	.feature-column li::before {
-		content: "✓";
-		color: #f39c12;
-		font-weight: bold;
-		margin-right: 0.5rem;
-	}
-	
-	.cta {
-		text-align: center;
-		background: rgba(243, 156, 18, 0.1);
-		padding: 3rem;
-		border-radius: 12px;
-		border: 1px solid rgba(243, 156, 18, 0.3);
-	}
-	
-	.cta-button {
-		display: inline-block;
-		background: #f39c12;
-		color: #000000;
-		padding: 1rem 2rem;
-		border-radius: 6px;
-		text-decoration: none;
-		font-weight: bold;
-		font-size: 1.1rem;
-		margin-top: 1rem;
-		transition: background 0.3s, transform 0.3s;
-	}
-	
-	.cta-button:hover {
-		background: #e67e22;
-		transform: translateY(-2px);
-	}
-	
-	@media (max-width: 768px) {
-		h1 {
-			font-size: 3rem;
-		}
-		
-		.hero-section p {
-			font-size: 1.1rem;
-		}
-		
-		.services-grid {
-			grid-template-columns: 1fr;
-		}
-		
-		.features-container {
-			grid-template-columns: 1fr;
-		}
-	}
-</style>
+	<!-- Independence with Support Section -->
+	<section class="bg-white py-16 sm:py-24">
+		<div class="mx-auto max-w-4xl px-6 lg:px-8">
+			<div class="mx-auto max-w-2xl text-center">
+				<h2 class="text-3xl font-bold tracking-tight text-bonita-600 sm:text-4xl mb-8">
+					Independence with Support
+				</h2>
+			</div>
+			<div class="bg-bonita-50 rounded-xl p-8 lg:p-12 border border-bonita-100 shadow-lg">
+				<p class="text-lg leading-relaxed text-bonita-slate-700 text-center">
+					Our Supported Independent Living program bridges the gap between residential care and complete independence. We provide flexible, individualized support that allows people to live in their own homes while accessing the services they need to maintain stability and achieve their personal goals.
+				</p>
+			</div>
+		</div>
+	</section>
+
+	<!-- Core Services Section -->
+	<section class="bg-bonita-slate-50 py-16 sm:py-24">
+		<div class="mx-auto max-w-7xl px-6 lg:px-8">
+			<div class="mx-auto max-w-2xl text-center mb-16">
+				<h2 class="text-3xl font-bold tracking-tight text-bonita-emerald-600 sm:text-4xl mb-8">
+					Core Services
+				</h2>
+			</div>
+			
+			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+				<div class="bg-white rounded-xl p-8 shadow-lg border border-bonita-slate-200 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+					<h3 class="text-xl font-semibold text-bonita-600 mb-4">Daily Living Skills</h3>
+					<p class="text-bonita-slate-600 leading-relaxed">Training and support in essential life skills including cooking, cleaning, budgeting, and personal care management.</p>
+				</div>
+				
+				<div class="bg-white rounded-xl p-8 shadow-lg border border-bonita-slate-200 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+					<h3 class="text-xl font-semibold text-bonita-emerald-600 mb-4">Community Integration</h3>
+					<p class="text-bonita-slate-600 leading-relaxed">Assistance connecting with community resources, social activities, and building meaningful relationships.</p>
+				</div>
+				
+				<div class="bg-white rounded-xl p-8 shadow-lg border border-bonita-slate-200 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+					<h3 class="text-xl font-semibold text-bonita-600 mb-4">Employment Support</h3>
+					<p class="text-bonita-slate-600 leading-relaxed">Job search assistance, interview preparation, workplace skills training, and ongoing employment support.</p>
+				</div>
+				
+				<div class="bg-white rounded-xl p-8 shadow-lg border border-bonita-slate-200 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+					<h3 class="text-xl font-semibold text-bonita-emerald-600 mb-4">Healthcare Coordination</h3>
+					<p class="text-bonita-slate-600 leading-relaxed">Help navigating healthcare systems, managing appointments, and ensuring continuity of medical and mental health care.</p>
+				</div>
+				
+				<div class="bg-white rounded-xl p-8 shadow-lg border border-bonita-slate-200 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+					<h3 class="text-xl font-semibold text-bonita-600 mb-4">Crisis Planning</h3>
+					<p class="text-bonita-slate-600 leading-relaxed">Development of personalized crisis intervention plans and 24/7 access to emergency support when needed.</p>
+				</div>
+				
+				<div class="bg-white rounded-xl p-8 shadow-lg border border-bonita-slate-200 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+					<h3 class="text-xl font-semibold text-bonita-emerald-600 mb-4">Life Coaching</h3>
+					<p class="text-bonita-slate-600 leading-relaxed">Goal setting, motivation, and ongoing coaching to help individuals achieve their personal and professional aspirations.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Program Features Section -->
+	<section class="bg-white py-16 sm:py-24">
+		<div class="mx-auto max-w-6xl px-6 lg:px-8">
+			<div class="mx-auto max-w-2xl text-center mb-16">
+				<h2 class="text-3xl font-bold tracking-tight text-bonita-600 sm:text-4xl mb-8">
+					Program Features
+				</h2>
+			</div>
+			
+			<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+				<div class="bg-bonita-50 rounded-xl p-8 border border-bonita-100">
+					<h3 class="text-xl font-semibold text-bonita-600 mb-6">Flexible Support Levels</h3>
+					<ul class="space-y-3">
+						<li class="flex items-start">
+							<span class="text-bonita-600 mr-3">✓</span>
+							<span class="text-bonita-slate-700">Daily check-ins and visits</span>
+						</li>
+						<li class="flex items-start">
+							<span class="text-bonita-600 mr-3">✓</span>
+							<span class="text-bonita-slate-700">Weekly support meetings</span>
+						</li>
+						<li class="flex items-start">
+							<span class="text-bonita-600 mr-3">✓</span>
+							<span class="text-bonita-slate-700">Monthly progress reviews</span>
+						</li>
+						<li class="flex items-start">
+							<span class="text-bonita-600 mr-3">✓</span>
+							<span class="text-bonita-slate-700">As-needed crisis support</span>
+						</li>
+					</ul>
+				</div>
+				
+				<div class="bg-bonita-emerald-50 rounded-xl p-8 border border-bonita-emerald-100">
+					<h3 class="text-xl font-semibold text-bonita-emerald-600 mb-6">Individualized Plans</h3>
+					<ul class="space-y-3">
+						<li class="flex items-start">
+							<span class="text-bonita-emerald-600 mr-3">✓</span>
+							<span class="text-bonita-slate-700">Personal goal development</span>
+						</li>
+						<li class="flex items-start">
+							<span class="text-bonita-emerald-600 mr-3">✓</span>
+							<span class="text-bonita-slate-700">Customized service delivery</span>
+						</li>
+						<li class="flex items-start">
+							<span class="text-bonita-emerald-600 mr-3">✓</span>
+							<span class="text-bonita-slate-700">Progress tracking and adjustments</span>
+						</li>
+						<li class="flex items-start">
+							<span class="text-bonita-emerald-600 mr-3">✓</span>
+							<span class="text-bonita-slate-700">Regular plan reviews</span>
+						</li>
+					</ul>
+				</div>
+				
+				<div class="bg-bonita-50 rounded-xl p-8 border border-bonita-100">
+					<h3 class="text-xl font-semibold text-bonita-600 mb-6">Community Focus</h3>
+					<ul class="space-y-3">
+						<li class="flex items-start">
+							<span class="text-bonita-600 mr-3">✓</span>
+							<span class="text-bonita-slate-700">Local resource connections</span>
+						</li>
+						<li class="flex items-start">
+							<span class="text-bonita-600 mr-3">✓</span>
+							<span class="text-bonita-slate-700">Social skill development</span>
+						</li>
+						<li class="flex items-start">
+							<span class="text-bonita-600 mr-3">✓</span>
+							<span class="text-bonita-slate-700">Volunteer opportunities</span>
+						</li>
+						<li class="flex items-start">
+							<span class="text-bonita-600 mr-3">✓</span>
+							<span class="text-bonita-slate-700">Peer support networks</span>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Who Benefits Section -->
+	<section class="bg-bonita-slate-50 py-16 sm:py-24">
+		<div class="mx-auto max-w-4xl px-6 lg:px-8">
+			<div class="mx-auto max-w-2xl text-center">
+				<h2 class="text-3xl font-bold tracking-tight text-bonita-emerald-600 sm:text-4xl mb-8">
+					Who Benefits
+				</h2>
+			</div>
+			<div class="bg-white rounded-xl p-8 lg:p-12 border border-bonita-slate-200 shadow-lg">
+				<p class="text-lg leading-relaxed text-bonita-slate-700 text-center">
+					Our Supported Independent Living program serves adults who have the desire and potential to live independently but need ongoing support to maintain housing, employment, and community connections. This includes individuals transitioning from residential care, those with mental health conditions, developmental disabilities, or anyone seeking to build greater independence while maintaining necessary supports.
+				</p>
+			</div>
+		</div>
+	</section>
+
+	<!-- Call to Action Section -->
+	<section class="bg-bonita-gradient py-16 sm:py-24">
+		<div class="mx-auto max-w-4xl px-6 lg:px-8 text-center">
+			<h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl mb-8">
+				Take the Next Step
+			</h2>
+			<p class="text-xl leading-relaxed text-bonita-100 mb-12 max-w-2xl mx-auto">
+				Ready to explore greater independence with the right support? Learn more about our Supported Independent Living program and how we can help you achieve your goals.
+			</p>
+			<a href="/contact" 
+			   class="inline-flex items-center rounded-full bg-white px-8 py-4 text-lg font-semibold text-bonita-600 shadow-lg hover:bg-bonita-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+				Learn More
+				<svg class="ml-2 -mr-1 w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+					<path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+				</svg>
+			</a>
+		</div>
+	</section>
+</Layout>
