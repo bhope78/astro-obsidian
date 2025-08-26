@@ -2,6 +2,10 @@
 export default {
   content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
   theme: {
+    fontFamily: {
+      'serif': ['Junge', 'Forum', 'Georgia', 'Cambria', '"Times New Roman"', 'Times', 'serif'],
+      'sans': ['Inter', 'system-ui', 'sans-serif'],
+    },
     extend: {
       colors: {
         // Professional healthcare/nonprofit color palette
@@ -52,9 +56,6 @@ export default {
         'bonita-gradient': 'linear-gradient(135deg, oklch(0.42 0.13 196.66) 0%, oklch(0.43 0.11 160.62) 100%)',
         'bonita-gradient-light': 'linear-gradient(135deg, oklch(0.96 0.013 180.95) 0%, oklch(0.96 0.013 156.57) 100%)',
       },
-      fontFamily: {
-        sans: ['Inter', 'system-ui', 'sans-serif'],
-      },
       spacing: {
         '18': '4.5rem',
         '88': '22rem',
@@ -62,6 +63,13 @@ export default {
     },
   },
   plugins: [
-    require('@tailwindcss/typography'),
+    require('@tailwindcss/typography')({
+      className: 'prose',
+    }),
+    function({ addBase }) {
+      addBase({
+        'html': { fontFamily: '"Junge", "Forum", Georgia, Cambria, "Times New Roman", Times, serif' },
+      })
+    },
   ],
 }

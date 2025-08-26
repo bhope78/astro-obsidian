@@ -16,6 +16,23 @@ const { title = 'Ossified Orbit' } = Astro.props;
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
+		<!-- Self-hosted fonts -->
+		<style>
+			@font-face {
+				font-family: 'Junge';
+				src: url('/fonts/Junge-Regular.ttf') format('truetype');
+				font-weight: normal;
+				font-style: normal;
+				font-display: swap;
+			}
+			@font-face {
+				font-family: 'Forum';
+				src: url('/fonts/Forum-Regular.ttf') format('truetype');
+				font-weight: normal;
+				font-style: normal;
+				font-display: swap;
+			}
+		</style>
 	</head>
 	<body>
 		<Navigation />
@@ -29,6 +46,7 @@ const { title = 'Ossified Orbit' } = Astro.props;
 	/* Clean, minimal global styles that work WITH Tailwind, not against it */
 	html {
 		font-feature-settings: 'rlig' 1, 'calt' 1;
+		font-family: 'Junge', 'Forum', Georgia, Cambria, 'Times New Roman', Times, serif;
 	}
 	
 	body {
@@ -36,6 +54,7 @@ const { title = 'Ossified Orbit' } = Astro.props;
 		padding: 0;
 		background-color: #ffffff;
 		min-height: 100vh;
+		font-family: inherit;
 	}
 	
 	/* Modern mobile-first responsive layout - Works with Tailwind utilities */
