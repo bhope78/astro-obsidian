@@ -1,0 +1,64 @@
+{
+  "locations": [
+    {
+      "id": 1,
+      "name": "Administrative Office",
+      "address": "1919 Addison St, Suite 204, Berkeley, CA 94704",
+      "lat": 37.8703,
+      "lng": -122.2716,
+      "services": "Central administration and oversight for all programs",
+      "phone": "510-899-7445",
+      "type": "administrative"
+    },
+    {
+      "id": 2,
+      "name": "Berkeley Wellness Center",
+      "address": "1909 University Avenue, Berkeley, CA 94704",
+      "lat": 37.8718,
+      "lng": -122.2718,
+      "services": "Arts-focused wellness program offering peer-to-peer support groups, art and music groups, mindfulness training, and individual mental health services in a safe, inclusive environment for adults",
+      "phone": "510-809-3004",
+      "type": "wellness"
+    },
+    {
+      "id": 3,
+      "name": "Casa Ubuntu Wellness Center",
+      "address": "7200 Bancroft Ave, Suite 267, Oakland, CA 94605",
+      "lat": 37.7664,
+      "lng": -122.1653,
+      "services": "Wellness and recovery activities including peer support groups, individual mental health services, social/recreational activities, resource referrals, and bilingual (English/Spanish) support for adults 25+ with mental health or substance use issues",
+      "phone": "510-735-0864",
+      "type": "wellness"
+    },
+    {
+      "id": 4,
+      "name": "Dual-Diagnosis Residential Treatment Program",
+      "address": "1410 Bonita Ave, Berkeley, CA 94709",
+      "lat": 37.8777,
+      "lng": -122.2726,
+      "services": "Evidence-based residential treatment for individuals with co-occurring serious mental illness and substance use disorders, including assessment, counseling, stabilization, and skill-building for recovery and community integration",
+      "phone": "510-526-4765",
+      "type": "residential"
+    },
+    {
+      "id": 6,
+      "name": "Oakland Office - Harrison St",
+      "address": "1422 Harrison St, Oakland, CA 94612",
+      "lat": 37.8050,
+      "lng": -122.2644,
+      "services": "Comprehensive mental health and substance use services, potentially including crisis support, case management, or outreach programs",
+      "phone": "510-809-1780",
+      "type": "office"
+    },
+    {
+      "id": 7,
+      "name": "Oakland Office - Jefferson St",
+      "address": "1605 Jefferson St, Oakland, CA 94612",
+      "lat": 37.8062,
+      "lng": -122.2710,
+      "services": "Behavioral health services, including mental health support and potentially administrative or clinical functions",
+      "phone": "510-923-1099",
+      "type": "office"
+    }
+  ]
+}

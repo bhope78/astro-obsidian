@@ -1,0 +1,55 @@
+---
+import Layout from '../layouts/Layout.astro';
+import LocationsMap from '../components/LocationsMap.astro';
+---
+
+<Layout title="Our Locations - Bonita House">
+  <div class="bg-white py-12 sm:py-16">
+    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+      <!-- Header Section -->
+      <div class="mx-auto max-w-2xl text-center mb-12">
+        <h1 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">Our Locations</h1>
+        <p class="mt-6 text-lg leading-8 text-gray-600">
+          Bonita House operates multiple facilities across Berkeley and Oakland, providing comprehensive behavioral health services to our community. Find a location near you.
+        </p>
+      </div>
+
+      <!-- Map Section -->
+      <div class="mb-16">
+        <LocationsMap />
+      </div>
+
+
+      <!-- Services Overview -->
+      <div class="mt-16">
+        <h2 class="text-2xl font-bold text-gray-900 mb-8 text-center">Services Available at Our Locations</h2>
+        <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          <div class="rounded-lg border border-gray-200 p-6">
+            <h3 class="font-semibold text-gray-900 mb-2">Wellness Centers</h3>
+            <p class="text-sm text-gray-600">Peer support groups, arts programs, mindfulness training, and individual mental health services</p>
+          </div>
+          <div class="rounded-lg border border-gray-200 p-6">
+            <h3 class="font-semibold text-gray-900 mb-2">Residential Treatment</h3>
+            <p class="text-sm text-gray-600">Evidence-based treatment for co-occurring mental illness and substance use disorders</p>
+          </div>
+          <div class="rounded-lg border border-gray-200 p-6">
+            <h3 class="font-semibold text-gray-900 mb-2">Case Management</h3>
+            <p class="text-sm text-gray-600">Comprehensive support including therapy, medication management, and vocational training</p>
+          </div>
+          <div class="rounded-lg border border-gray-200 p-6">
+            <h3 class="font-semibold text-gray-900 mb-2">Crisis Support</h3>
+            <p class="text-sm text-gray-600">24/7 emergency support and crisis intervention services</p>
+          </div>
+          <div class="rounded-lg border border-gray-200 p-6">
+            <h3 class="font-semibold text-gray-900 mb-2">Bilingual Services</h3>
+            <p class="text-sm text-gray-600">Support services available in English and Spanish at select locations</p>
+          </div>
+          <div class="rounded-lg border border-gray-200 p-6">
+            <h3 class="font-semibold text-gray-900 mb-2">Employment Support</h3>
+            <p class="text-sm text-gray-600">Vocational training, job placement assistance, and employment support services</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>
